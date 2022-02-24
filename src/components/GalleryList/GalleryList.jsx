@@ -16,14 +16,16 @@ const [vote, setVote] = useState(0);
 			.then((result) => {
 				console.log("Updated Vote, this is response");
 				// Get Updated list, might need rename?
-				getList();
+				getGallery();
 			})
 			.catch((res) => {
 				console.log("Error upVoting");
 			});
 
     }// end upVote
-    
+
+
+
       // On Load, do this thing // This is like OnReady in JQuery
   useEffect(() => {
     console.log('in useEffect')
@@ -39,7 +41,7 @@ const [vote, setVote] = useState(0);
         
         {galleryList.map(gallery =>
                 (<div key={gallery.id}>
-                    {<img scr={gallery.path} />}
+                    {<img src={gallery.path} />}
                     <label>{vote} People Love This</label>
                     <button onClick={upVote}>Love it!</button>
                     </div>)
