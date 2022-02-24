@@ -39,13 +39,33 @@ useEffect(() => {
     }
 
 
+    const upVote = (galleryList) => {
+      
+          console.log('clicked', galleryList);
+  
+  
+  
+      axios.put(`/gallery/like/${galleryList.id}`)
+        .then((result) => {
+          console.log("Updated Vote, this is response",result);
+                  // console.log(`gallery id is ${gallery.id}`);
+          // Get Updated list
+          getGallery();
+        })
+        .catch((res) => {
+          console.log("Error upVoting");
+        });
+  
+      }// end upVote
+
+
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList galleryList={galleryList} getGallery={getGallery} />
+        <GalleryList galleryList={galleryList} getGallery={getGallery} upVote={upVote} />
 
       </div>
     );
