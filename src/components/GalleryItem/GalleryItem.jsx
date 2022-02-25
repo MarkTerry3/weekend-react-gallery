@@ -3,10 +3,9 @@ import {useState, useEffect} from 'react';
 
 function GalleryItem({galleryItem, upVote}) {
 
+
+    // create state variables to use for conditional rendering
     const [showDescription, setShowDescription ] = useState(false);
-
-
-
 
 
     return(

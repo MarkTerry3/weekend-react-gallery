@@ -6,8 +6,6 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 function GalleryList({galleryList, getGallery, upVote}) {
 
-    const [showDescription, setShowDescription ] = useState(false);
-
 
       // On Load, do this thing // This is like OnReady in JQuery
   useEffect(() => {

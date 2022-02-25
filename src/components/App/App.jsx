@@ -19,6 +19,8 @@ useEffect(() => {
 
     const getGallery = () => {
 
+      //GET all of the data to append the picture and likes to the DOM
+
       axios({
         method: 'GET',
         url: '/gallery'
@@ -42,9 +44,8 @@ useEffect(() => {
     const upVote = (galleryList) => {
       
           console.log('clicked', galleryList);
-  
-  
-  
+
+        //PUT to update the number of 'likes' on a photo - use the ${id}
       axios.put(`/gallery/like/${galleryList.id}`)
         .then((result) => {
           console.log("Updated Vote, this is response",result);

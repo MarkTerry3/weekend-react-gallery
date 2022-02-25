@@ -1,9 +1,6 @@
-# Project Name
+# Weekend React Gallery
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+In this project I created a picture gallery using React. This application was full stack. I added a like button to resemble a social media site, which talked to a database to update the number of likes. You can click on a picture to view its description, or click it again to go back to the picture, this feature also utilized the database. 
