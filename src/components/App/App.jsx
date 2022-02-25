@@ -60,15 +60,19 @@ useEffect(() => {
 
 
     return (
+      <>
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList galleryList={galleryList} getGallery={getGallery} upVote={upVote} />
-
+        <GalleryList key={galleryList.id} galleryList={galleryList} getGallery={getGallery} upVote={upVote} />
       </div>
+      
+
+      </>
     );
 }
 
 export default App;
+
